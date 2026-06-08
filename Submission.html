@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>SSIM 2026</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: #123C7A;
+    color: white;
+    padding: 30px 25px;
+    z-index: 1000;
+}
+.main {
+
+    margin-left: 280px;
+
+    min-height: 100vh;
+}
+.sidebar h3 {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding-bottom: 18px;
+    margin-bottom: 25px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 11px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+border-left: 4px solid #4FC3F7;
+}
+#coll{
+    min-height: 20vh;
+    width: 100%;
+    background: #F4F6F9;
+    background-position: center;
+}
+.hero {
+    min-height: 62vh;
+    background: #F4F6F9;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-card {
+    width: 100%;
+    padding: 0px 0px;
+    text-align: center;
+    color:black;
+    background:#F8F9FA;
+    backdrop-filter: blur(6px);
+    border-bottom:4px solid #4FC3F7;
+}
+
+.hero-card h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.hero-card p {
+    font-size: 24px;
+}
+
+.logo-section {
+    background: #F4F6F9;
+    padding: 35px 60px;
+}
+
+.logo-box {
+    background: white;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.logo-box img {
+    max-width: 100%;
+    max-height: 70px;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .hero-card {
+        width: 100%;
+        padding: 5px 0px;
+    }
+
+    .hero-card h1 {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h3>ICON</h3>
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Tracks.html">Call for Papers</a>
+    <a href="IData.html">Important Dates</a>
+    <a href="Submission.html">Submission</a>
+    <a href="Publish.html">Publication</a>
+    <a href="Regis.html">Registration</a>
+    <a href="Program.html">Program</a>
+    <a href="Keynote.html">Keynote Speakers </a>
+    <a href="Venue.html">Venue & Travel</a>
+    <a href="intro.html">Explore Taichung</a>
+    <a href="Comm.html">Committee</a>
+    <a href="Spon.html">Sponsors</a>
+    <a href="Contact.html">Contact</a>
+</div>
+<div class="main">
+    <section id="coll">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 90%; margin: 0 auto; ">
+            <div class="carousel-inner" style="height: 30vh;">
+                <div class="carousel-item active">
+                <img src="img/01.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+                <div class="carousel-item">
+                <img src="img/02.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+                <div class="carousel-item">
+                <img src="img/03.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section id="home" class="hero">
+      <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2 style="text-align: center;"><b>Paper Submission</b></h2>
+        <p>
+            Papers that meet the conference proceedings requirements will be considered for publication following a rigorous peer-review process. All submissions will be evaluated based on originality, academic quality, methodological rigor, and relevance to the conference themes.
+        </p>
+        <p>
+            The SSIM 2026 conference proceedings are planned to be published in the Springer Smart Innovation, Systems and Technologies (SIST) book series. Depending on thematic alignment and submission categories, selected papers may also be considered for a joint publication track in an Information Systems / Computer Science related Springer series, consistent with previous SSIM publication arrangements.
+        </p>
+        <p>
+            All accepted papers must strictly follow the SSIM 2026 formatting and submission guidelines.
+        </p>
+        <hr />
+        <h5><b>Paper Types</b></h5>
+        <p>SSIM 2026 accepts the following types of submissions:</p>
+        <p>Abstract Submission</p>
+        <ul>
+            <li>Up to 300 words</li>
+            <li>For oral or poster presentation consideration</li>
+            <li>
+                Abstracts must clearly describe the research purpose, methodology, and expected contributions
+            </li>
+        </ul>	
+        <p>Full Paper Submission</p>
+        <ul>
+            <li>Length: 10–12 pages (Springer format)</li>
+            <li>Eligible for conference proceedings publication</li>
+            <li>
+                Must include complete research results, analysis, and references
+            </li>
+        </ul>
+        <hr />
+        <p>Submission Requirements</p>
+        <ul>
+            <li>All papers must be submitted electronically in PDF format</li>
+            <li>Papers must be written in English</li>
+            <li>
+                All submissions must follow the official SSIM 2026 Springer template
+            </li>
+            <li>
+                Each paper must comply with the conference formatting and length requirements
+            </li>
+        </ul>	
+        <p>Similarity and Plagiarism Policy</p>
+        <ul>
+            <li>All submissions will be checked using plagiarism detection tools</li>
+            <li>The similarity index must be below 20%</li>
+            <li>
+                Papers exceeding the threshold may be rejected without review
+            </li>
+        </ul>
+        <hr />
+        <h5><b>SSIM 2026 Paper Templates</b></h5>
+        <p>Authors are required to use the official Springer templates:</p>
+        <p>MS Word Template</p>
+        <p><a href="https://www.springer.com/gp/authors-editors/conference-proceedings/editors/word-template/19338734" target="_blank">https://www.springer.com/gp/authors-editors/conference-proceedings/editors/word-template/19338734</a></p>
+        <p>LaTeX Template</p>
+        <p><a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines</a></p>
+        <hr />
+        <h5><b>Presentation Formats</b></h5>
+        <p>Accepted papers will be presented in one of the following formats:</p>
+        <ul>
+            <li>Oral Presentation</li>
+            <li>Poster Presentation</li>
+        </ul>
+        <p>Final presentation format will be assigned by the Program Committee.</p>
+        <hr />
+        <h5><b>Publication Information</b></h5>
+        <p>All accepted and presented papers will be published in the Springer Smart Innovation, Systems and Technologies (SIST) series, subject to Springer approval and final editorial review.</p>
+        <p>Papers included in the proceedings are typically submitted for indexing in international databases such as:</p>
+        <ul>
+            <li>Scopus</li>
+            <li>EI Compendex (Engineering Village) (subject to indexing approval)</li>
+        </ul>
+        <p>Please note that indexing outcomes are determined independently by indexing services.</p>
+        <hr />
+        <h5><b>Submission System</b></h5>
+        <p>All submissions and reviews will be managed through the official conference submission system.</p>
+        <p>Detailed submission instructions and system access will be announced on the SSIM 2026 website.</p>
+        <hr />
+        <h5><b>Additional Notes</b></h5>
+        <ul>
+            <li>All submissions will undergo a double-blind peer review process</li>
+            <li>Submissions must be original and not under review elsewhere</li>
+            <li>At least one author of each accepted paper must register for the conference and present the work for inclusion in the proceedings</li>
+        </ul>
+        <hr />
+        <p>We look forward to your contributions to SSIM 2026 and to advancing interdisciplinary research across social sciences, education, and intelligent systems.</p>
+        <hr />
+        <h5><b>Review Proces</b></h5>
+        <p>To ensure high academic quality and rigorous international publication standards, SSIM 2026 adopts a strict peer-review and editorial process fully aligned with Springer proceedings guidelines.</p>
+        <ul>
+            <li>Review Model: Double-blind peer-review process.</li>
+            <li>Review Platform: Microsoft Conference Management Toolkit (Microsoft CMT).</li>
+            <li>Review Assignment: Each submission will be evaluated by at least two independent international reviewers with relevant expertise.</li>
+            <li>Selection Criteria: Originality, methodological rigor, theoretical contribution, technical quality, interdisciplinary relevance, innovation, and clarity of presentation.</li>
+            <li>Plagiarism Screening: All submissions will undergo strict plagiarism detection using professional similarity-checking software (e.g., Turnitin or iThenticate). Papers exceeding acceptable similarity thresholds will be rejected prior to the formal review phase.</li>
+            <li>Language Requirement: All accepted papers must be written in professional academic English and comply with Springer formatting guidelines.</li>
+            <li>Paper Length: Full papers are expected to be 10–12 pages following the official Springer single-column proceedings template (Word or LaTeX).</li>
+            <li>Publication Decision: Final inclusion in the Springer SIST volume is subject to successful peer review, editorial evaluation, and Springer’s final quality assessment.</li>
+            <li>Post-Conference Publication Opportunity: Selected high-quality papers will be recommended for extended journal publication opportunities after undergoing a secondary peer-review process.</li>
+        </ul>
+        <hr />
+        <h5><b>Presentation Guidelines</b></h5>
+        <p>To ensure a smooth and high-quality academic exchange, all presenters at SSIM 2026 are requested to follow the guidelines below. These instructions apply to both oral and poster presentations.</p>
+        <hr />
+        <h5><b>Oral Presentation Guidelines</b></h5>
+        <p><b>Presentation Duration</b></p>
+        <ul>
+            <li>
+                Regular presentation: 15 minutes
+                <ul>
+                    <li>Presentation: 12 minutes</li>
+                    <li>Q&A: 3 minutes</li>
+                </ul>
+            </li>
+            <li>
+                Keynote presentation: 40–50 minutes (including discussion time, depending on session arrangement)
+            </li>
+        </ul>
+        <p>Session chairs will strictly manage time to ensure all speakers have equal opportunity to present.</p>
+        <hr />
+        <h5><b>Language</b></h5>
+        <ul>
+            <li>The official language of SSIM 2026 is English.</li>
+            <li>All presentations and slides should be prepared in English.</li>
+        </ul>
+        <hr />
+        <h5><b>Slide Preparation</b></h5>
+        <ul>
+            <li>Use PowerPoint (.ppt or .pptx) format.</li>
+            <li>Recommended slide ratio: 16:9 widescreen.</li>
+            <li>Ensure fonts are readable and consistent across slides.</li>
+            <li>Avoid excessive text; use figures, tables, and diagrams where appropriate.</li>
+        </ul>
+        <hr />
+        <h5><b>Technical Requirements</b></h5>
+        <ul>
+            <li>All presenters should submit their presentation files in advance or bring them on a USB drive.</li>
+            <li>A standard computer and projector will be provided in each session room.</li>
+            <li>Presenters are responsible for ensuring compatibility of multimedia elements (videos, audio, animations).</li>
+        </ul>
+        <hr />
+        <h5><b>Online / Hybrid Presentation </b></h5>
+        <ul>
+            <li>Presenters joining online must ensure a stable internet connection, webcam, and microphone.</li>
+            <li>The conference platform link will be provided prior to the session.</li>
+            <li>Presenters are advised to join the session at least 10–15 minutes early for technical checks.</li>
+        </ul>
+        <hr />
+        <h5><b>Poster Presentation Guidelines </b></h5>
+        <p><b>Poster Size and Format</b></p>
+        <ul>
+            <li>Recommended size: A0 (portrait orientation)</li>
+            <li>Language: English</li>
+            <li>Posters should clearly present research objectives, methods, results, and conclusions.</li>
+        </ul>
+        <hr />
+        <h5><b>Poster Session</b></h5>
+        <ul>
+            <li>Authors are expected to stand by their posters during the designated session time.</li>
+            <li>Short oral explanations may be requested by reviewers or participants.</li>
+            <li>Interaction and discussion with attendees are strongly encouraged.</li>
+        </ul>
+
+        <hr />
+        <h5><b>Printing and Setup</b></h5>
+        <ul>
+            <li>Posters must be printed in advance by presenters.</li>
+            <li>Mounting materials and display boards will be provided by the conference.</li>
+            <li>Posters should be installed before the start of the poster session.</li>
+        </ul>
+        <hr />
+        <h5><b>Best Practice Recommendations</b></h5>
+        <ul>
+            <li>Clearly highlight the research contribution and novelty.</li>
+            <li>Use minimal text and strong visual representation.</li>
+            <li>Prepare a brief 1–2 minute summary for informal discussion.</li>
+            <li>Anticipate questions related to methodology, data analysis, and implications.</li>
+        </ul>
+        <hr />
+        <h5><b>Important Notes</b></h5>
+        <ul>
+            <li>Presentations must align with the submitted and accepted abstract/full paper.</li>
+            <li>Any significant deviation in content should be approved by the session chair.</li>
+            <li>Certificates of presentation will be issued only to registered presenters who complete their scheduled session.</li>
+        </ul>
+        <p>We look forward to your active participation and engaging presentations at SSIM 2026.</p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    </section>
+    <section class="logo-section">
+        <div class="container-fluid">
+            <div class="row g-5 justify-content-center">
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/CYUT_Logo.svg.png">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/S__49922121.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/0-SpringerLink_logo-2.png">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
