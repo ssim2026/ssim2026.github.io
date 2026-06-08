@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>SSIM 2026</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: #123C7A;
+    color: white;
+    padding: 30px 25px;
+    z-index: 1000;
+}
+.main {
+
+    margin-left: 280px;
+
+    min-height: 100vh;
+}
+.sidebar h3 {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding-bottom: 18px;
+    margin-bottom: 25px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 11px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+border-left: 4px solid #4FC3F7;
+}
+#coll{
+    min-height: 20vh;
+    width: 100%;
+    background: #F4F6F9;
+    background-position: center;
+}
+.hero {
+    min-height: 62vh;
+    background: #F4F6F9;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-card {
+    width: 100%;
+    padding: 0px 0px;
+    text-align: center;
+    color:black;
+    background:#F8F9FA;
+    backdrop-filter: blur(6px);
+    border-bottom:4px solid #4FC3F7;
+}
+
+.hero-card h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.hero-card p {
+    font-size: 24px;
+}
+
+.logo-section {
+    background: #F4F6F9;
+    padding: 35px 60px;
+}
+
+.logo-box {
+    background: white;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.logo-box img {
+    max-width: 100%;
+    max-height: 70px;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .hero-card {
+        width: 100%;
+        padding: 5px 0px;
+    }
+
+    .hero-card h1 {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h3>ICON</h3>
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Tracks.html">Call for Papers</a>
+    <a href="IData.html">Important Dates</a>
+    <a href="Submission.html">Submission</a>
+    <a href="Publish.html">Publication</a>
+    <a href="Regis.html">Registration</a>
+    <a href="Program.html">Program</a>
+    <a href="Keynote.html">Keynote Speakers </a>
+    <a href="Venue.html">Venue & Travel</a>
+    <a href="intro.html">Explore Taichung</a>
+    <a href="Comm.html">Committee</a>
+    <a href="Spon.html">Sponsors</a>
+    <a href="Contact.html">Contact</a>
+</div>
+
+<div class="main">
+    <section id="coll">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 90%; margin: 0 auto; ">
+            <div class="carousel-inner" style="height: 30vh;">
+                <div class="carousel-item active">
+                <img src="img/01.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+                <div class="carousel-item">
+                <img src="img/02.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+                <div class="carousel-item">
+                <img src="img/03.jpg" class="d-block w-100" alt="..." style="height: 30vh;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section id="home" class="hero">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10" >
+        <h2><b>Explore Taichung and Wufeng</b></h2>
+        <p>
+            Taichung is one of Taiwan’s most vibrant and livable cities, celebrated for its pleasant climate, rich cultural heritage, creative districts, modern architecture, and beautiful natural landscapes. Participants attending SSIM 2026 are encouraged to explore not only downtown Taichung but also the historic and cultural attractions surrounding Chaoyang University of Technology (CYUT) in Wufeng District.
+        </p>
+        <hr />
+        <h5><b>Historic and Cultural Attractions Near CYUT</b></h5>
+        <p><b>Wufeng Lin Family Mansion and Garden</b></p>
+        <p>One of Taiwan’s most significant national heritage sites, the Wufeng Lin Family Mansion and Garden preserves the legacy of the influential Lin family during the Qing Dynasty. Visitors can admire elegant traditional architecture, historic courtyards, classical gardens, and beautifully restored residences that reflect Taiwan’s rich cultural history.</p>
+        <p>Official Website:</p>
+        
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Main Entrance</li>
+            <li>Grand Flower Hall</li>
+            <li>Lai Garden</li>
+            <li>Traditional Courtyard Architecture</li>
+        </ul>
+        <hr />
+        <p><b>Guangfu New Village</b></p>
+        <p>Originally developed as a residential community for government employees in the 1950s, Guangfu New Village has evolved into a vibrant cultural and creative district. The area features cafés, artist studios, craft shops, exhibition spaces, and charming tree-lined streets, making it a popular destination for leisure and photography.</p>
+        <p>Official Information:</p>
+        <p>
+            <a href="https://www.taichung.travel" target="_blank">https://www.taichung.travel</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Historic Residential Buildings</li>
+            <li>Creative Market Area</li>
+            <li>Art Installations</li>
+            <li>Village Streetscape</li>
+        </ul>
+        <hr />
+        <p><b>Asia University Museum of Modern Art</b></p>
+        <p>Designed by the world-renowned architect Tadao Ando, this iconic museum combines contemporary architecture with modern art exhibitions. Located only a few minutes from CYUT, it is an excellent destination for visitors interested in art, design, and architecture.</p>
+        <p>Official Website:</p>
+        <p>
+            <a href="https://asiamuseum.com.tw" target="_blank">https://asiamuseum.com.tw</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Exterior Architecture</li>
+            <li>Main Exhibition Hall</li>
+            <li>Tadao Ando Design Features</li>
+            <li>Museum Plaza</li>
+        </ul>
+        <hr />
+        <h5><b>Must-Visit Attractions in Taichung</b></h5>
+        <p><b>National Taichung Theater</b></p>
+        <p>Designed by Japanese Pritzker Prize-winning architect Toyo Ito, the National Taichung Theater is widely recognized as one of the world’s most remarkable contemporary performing arts venues. Its flowing organic architecture and cultural exhibitions attract visitors from around the globe.</p>
+        <p>Website:</p>
+        <p>
+            <a href="https://www.npac-ntt.org" target="_blank">https://www.npac-ntt.org</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Exterior View</li>
+            <li>Main Lobby</li>
+            <li>Sky Garden</li>
+            <li>Performance Spaces</li>
+        </ul>
+        <hr />
+        <p><b>National Taiwan Museum of Fine Arts</b></p>
+        <p>Taiwan’s largest public art museum showcases modern and contemporary artworks by Taiwanese and international artists. The museum is also known for its expansive sculpture garden and peaceful green surroundings.</p>
+        <p>Website:</p>
+        <p>
+            <a href="https://www.ntmofa.gov.tw/en" target="_blank">https://www.ntmofa.gov.tw/en</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Museum Exterior</li>
+            <li>Sculpture Garden</li>
+            <li>Main Gallery</li>
+            <li>Outdoor Art Installations</li>
+        </ul>
+        <hr />
+        <p><b>Miyahara</b></p>
+        <p>Housed in a beautifully restored historic building, Miyahara combines architecture, local culture, desserts, and souvenirs. Its grand interior resembles a classic library and has become one of Taichung’s most photographed landmarks.</p>
+        <p>Website:</p>
+        <p>
+            <a href="https://www.dawncake.com.tw" target="_blank">https://www.dawncake.com.tw</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Grand Interior Hall</li>
+            <li>Signature Ice Cream</li>
+            <li>Historic Exterior</li>
+            <li>Gift Shop Displays</li>
+        </ul>
+        <hr />
+        <p><b>Rainbow Village Cultural Park</b></p>
+        <p>Famous for its colorful murals painted by the beloved “Grandpa Rainbow,” this artistic village has become an internationally recognized cultural attraction and popular photography destination.</p>
+        <p>Website:</p>
+        <p>
+            <a href="https://www.taichung.travel" target="_blank">https://www.taichung.travel</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Rainbow Murals</li>
+            <li>Painted Alleys</li>
+            <li>Public Art Installations</li>
+            <li>Visitor Activities</li>
+        </ul>
+        <hr />
+        <p><b>Gaomei Wetlands</b></p>
+        <p>One of Taiwan’s most famous sunset destinations, Gaomei Wetlands offers breathtaking coastal scenery, boardwalk trails, migratory bird watching, and spectacular sunset views over the Taiwan Strait.</p>
+        <p>Official Information:</p>
+        <p>
+            <a href="https://www.taichung.travel" target="_blank">https://www.taichung.travel</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Sunset Over Wetlands</li>
+            <li>Boardwalk</li>
+            <li>Wind Turbines</li>
+            <li>Coastal Landscape</li>
+        </ul>
+        <hr />
+        <p><b>Feng Chia Night Market</b></p>
+        <p>As one of Taiwan’s largest and most famous night markets, Feng Chia Night Market offers visitors an authentic Taiwanese experience featuring local street food, shopping, and entertainment.</p>
+        <p>Official Information:</p>
+        <p>
+            <a href="https://www.taichung.travel" target="_blank">https://www.taichung.travel</a>
+        </p>
+        <p><b>Recommended Photos</b></p>
+        <ul>
+            <li>Night Market Entrance</li>
+            <li>Street Food Stalls</li>
+            <li>Local Snacks</li>
+            <li>Evening Crowd Atmosphere</li>
+        </ul>
+        <hr />
+        <h5><b>Recommended Half-Day Tours</b></h5>
+        <p><b>Route A: Heritage and Culture</b></p>
+        <ul>
+            <li>Wufeng Lin Family Mansion and Garden</li>
+            <li>Guangfu New Village</li>
+            <li>Asia University Museum of Modern Art</li>
+            <li>Local Wufeng Cuisine</li>
+        </ul>
+        <p><b>Route B: Downtown Taichung Experience</b></p>
+        <ul>
+            <li>National Taichung Theater</li>
+            <li>GNational Taiwan Museum of Fine Arts</li>
+            <li>Miyahara</li>
+            <li>Feng Chia Night Market</li>
+        </ul>
+        <p><b>Route C: Nature and Sunset</b></p>
+        <ul>
+            <li>Downtown Taichung</li>
+            <li>Gaomei Wetlands</li>
+            <li>Coastal Sunset Viewing</li>
+        </ul>
+        <hr />
+        <h5><b>Conference Venue</b></h5>
+        <p><b>Chaoyang University of Technology (CYUT)</b></p>
+        <p>Located in Wufeng District, Taichung City, Chaoyang University of Technology provides conference participants with convenient access to both Taiwan’s rich cultural heritage and the modern attractions of central Taiwan.</p>
+        <p>Website:</p>
+        <p>
+            <a href="https://www.cyut.edu.tw" target="_blank">https://www.cyut.edu.tw</a>
+        </p>
+        <p>Address:</p>
+        <p>No. 168, Jifeng E. Road, Wufeng District, Taichung 413310, Taiwan</p>
+        <p>We look forward to welcoming you to Taichung and sharing the unique blend of history, culture, innovation, and hospitality that makes central Taiwan a memorable destination.</p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </section>
+<section class="logo-section">
+        <div class="container-fluid">
+            <div class="row g-5 justify-content-center">
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/CYUT_Logo.svg.png">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/S__49922121.jpg">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="logo-box">
+                        <img src="img/0-SpringerLink_logo-2.png">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
