@@ -6,6 +6,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<script>
+fetch("images2.json")
+  .then(response => response.json())
+  .then(carouselData => {
+    Object.keys(carouselData).forEach(id => {
+      buildCarousel(id, carouselData[id]);
+    });
+  });
+
+function buildCarousel(carouselId, images) {
+  const inner = document.querySelector(`#${carouselId} .carousel-inner`);
+
+  images.forEach((src, index) => {
+    const item = document.createElement("div");
+    item.className = "carousel-item" + (index === 0 ? " active" : "");
+
+    item.innerHTML = `
+      <img src="${src}" class="d-block w-100" alt="slide ${index + 1}">
+    `;
+
+    inner.appendChild(item);
+  });
+}
+</script>
 
 <style>
 body {
@@ -210,128 +234,159 @@ border-left: 4px solid #4FC3F7;
       <div class="row">
       <div class="col-md-1 col-sm-1 col-1"></div>
       <div class="col-md-10 col-sm-10 col-10">
-        <h2 style="text-align: center;"><b>Welcome to SSIM 2026</b></h2>
-        <h4 style="text-align: center;">The 6th International Conference on Social Sciences and Intelligence Management</h4>
-        <h4 style="text-align: center;">&#128308; Chaoyang University of Technology, Taichung, Taiwan</h4>
-        <h4 style="text-align: center;">&#128197;17-19 December 2026</h4>
-        <h4 style="text-align: center;">&#127757;Hybrid Conference (Onsite & Online)</h4>
-        <h5 style="text-align: center;">Theme: Human-Centered AI, Sustainable Digital Ecosystems, and Intelligent Transformation in Social Sciences</h5>
-        <h5 style=""><b>Welcome Message</b></h5>
+        <h2 style="text-align: center;"><b>SSIM 2026 Photo Gallery</b></h2>
+        <h5>📸<b>Photo Gallery</b></h5>
         <p>
-            On behalf of the Conference Chair and Organizing Committee, it is our great pleasure to welcome you to the<b> 6th International Conference on Social Sciences and Intelligence Management (SSIM 2026)</b>, jointly organized by <b>Chaoyang University of Technology</b>, Taiwan, and <b>Dong Thap University, Vietnam</b>, and to be held in Taichung, Taiwan. <br/>
-            In an era where artificial intelligence and digital transformation are rapidly reshaping societies, the need to integrate technological innovation with human-centered values has never been more important. SSIM 2026 provides an international platform for scholars, researchers, educators, practitioners, policymakers, and industry professionals to exchange ideas, present research findings, and explore emerging challenges and opportunities across disciplines.<br/>
-            The conference theme, <b>“Human-Centered AI, Sustainable Digital Ecosystems, and Intelligent Transformation in Social Sciences,”</b> reflects our shared vision to promote interdisciplinary collaboration and responsible innovation. We strongly believe that meaningful progress in the digital age emerges through global academic exchange and cross-border cooperation.<br/>
-            Over the past five successful editions, SSIM has developed into an active and growing international conference, attracting participants from diverse countries and regions. It has served as a valuable platform for academic dialogue, research dissemination, and international networking. As SSIM enters its sixth edition in 2026, we are pleased to further strengthen its global reach through expanded international partnerships.<br/>
-            SSIM 2026 will feature distinguished keynote speakers, peer-reviewed paper presentations, panel discussions, and interactive sessions designed to foster collaboration and inspire new research directions. We hope participants will not only share their academic work but also build meaningful long-term collaborations.<br/>
-            We also warmly invite you to experience Taichung, a vibrant and welcoming city in central Taiwan, known for its culture, innovation, and hospitality.<br/>
-            We sincerely thank all authors, reviewers, keynote speakers, committee members, and partners from both <b>Chaoyang University of Technology</b> and <b>Dong Thap University</b> for their valuable contributions and support in making this conference possible.<br/>
-            We look forward to welcoming you to SSIM 2026 and to a successful and inspiring conference.
+            Capturing memorable moments from SSIM 2026 and celebrating global collaboration in human-centered AI, intelligent learning ecosystems, social sciences, education, healthcare, business, and digital innovation.
+        </p>
+        <h5>🏛<b>Opening Ceremony & International Collaboration</b></h5>
+        <ul>
+            <li>Welcome Address</li>
+            <li>Conference Opening Ceremony</li>
+            <li>Distinguished Guests and Delegates</li>
+            <li>Group Photos</li>
+            <li>International Academic Partnerships</li>
+        </ul>
+        <h5>🌟<b>Keynote & Invited Speakers</b></h5>
+        <ul>
+            <li>Keynote Speeches</li>
+            <li>Panel Discussions</li>
+            <li>Q&A Sessions</li>
+        </ul>
+        <h5>📚<b>Conference Tracks Gallery</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片1.png" class="img-response" width="50%" />
+        </p>
+        <h5><b>Track 1. Human-Centered AI and Intelligent Learning Ecosystems</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片2.jpg" class="img-response" width="50%" />
         </p>
         <p>
-            Sincerely,<br />
-            <b>Liza Lee</b><br />
-            <b>Conference Chair</b><br />
-            SSIM 2026 <b>Organizing Committee</b><br />
-            <br />
-            <b>Co-Host Institutions</b><br />
-            <ul>
-                <li>Chaoyang University of Technology, Taiwan</li>
-                <li>Dong Thap University, Vietnam</li>
-            </ul>
-            
+            AI-enhanced learning environments, intelligent tutoring systems, human-AI collaboration, and sustainable digital learning ecosystems.
+        </p>
+        <h5><b>
+        Track 2. Emerging Technologies for Early Childhood Development and Interactive Learning</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片3.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            AI-supported developmental assessment, music and arts-based technologies, educational robotics, AR/VR learning, and inclusive early childhood education.
+        </p>
+        <h5><b>Track 3. Intelligent Language Education, EMI, and Digital Communication</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片5.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            AI-enhanced learning environments, intelligent tutoring systems, human-AI collaboration, and sustainable digital learning ecosystems.
+        </p>
+        <h5><b>Track 4. Intelligent Healthcare, Social Innovation, and Inclusive Technologies</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片6.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            Digital health, AI in healthcare, assistive technologies, social innovation, well-being, and inclusive technological solutions.
+        </p>
+        <h5><b>Track 5. Computational Media, Digital Communication, and Information Ethics</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片7.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            AI-generated media, digital storytelling, social media analytics, information ethics, privacy, and responsible communication technologies.
+        </p>
+        <h5><b>Track 6. AI-Driven Business Analytics and Sustainable Governance</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片8.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            Business intelligence, predictive analytics, digital transformation, ESG, sustainable governance, and AI-supported decision-making.
+        </p>
+        <h5><b>Track 7. Computational Social Sciences and Advanced Data Analytics</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片9.jpg" class="img-response" width="50%" />
+        </p>
+        <p>
+            Big data in social sciences, behavioral analytics, computational sociology, network analysis, and advanced data-driven research methods.
+        </p>
+        <h5>🏆<b>Certificates & Recognition</b></h5>
+        <ul>
+            <li>Keynote Speeches</li>
+            <li>Panel Discussions</li>
+            <li>Q&A Sessions</li>
+        </ul>
+        <h5>🌟<b>Keynote & Invited Speakers</b></h5>
+        <ul>
+            <li>Keynote Speeches</li>
+            <li>Panel Discussions</li>
+            <li>Q&A Sessions</li>
+        </ul>
+        <h5>🤝<b>Networking & Cultural Experience</b></h5>
+        <ul>
+            <li>Welcome Reception</li>
+            <li>Conference Banquet</li>
+            <li>Academic Networking Sessions</li>
+            <li>
+                Cultural Exchange Activities
+            </li>
+        </ul>
+        <h5>🏞 <b>Discover Taichung & Chaoyang</b></h5>
+        <p style="text-align: center;">
+            <img src="img/P1/圖片10.jpg" class="img-response" width="100%" />
+        </p>
+        <p>Featuring memorable moments from campus tours and cultural visits, including:</p>
+        <ul>
+            <li>Chaoyang University of Technology</li>
+            <li>Wufeng Lin Family Mansion and Garden</li>
+            <li>Guangfu New Village</li>
+            <li>National Taichung Theater</li>
+            <li>Fengjia Night Market</li>
+        </ul>
+        <h5>📖 <b>SSIM Through the Years/b></h5>
+        <p>
+            Since its inception in 2021, SSIM has evolved from a pioneering interdisciplinary conference into an international platform connecting researchers, educators, practitioners, and innovators across social sciences, artificial intelligence, education, healthcare, business, and digital technologies.
+        </p>
+        <ul>
+            <li>SSIM 2021– The Beginning of SSIM
+                <p>The 1st International Conference on Social Sciences and Intelligenct Management (SSIM 2021) marked the beginning of an international interdisciplinary platform that bridges social sciences and emerging intelligent technologies. Organized during the COVID-19 pandemic, SSIM 2021 successfully connected researchers and scholars from different regions through virtual and hybrid participation, establishing a strong foundation for the conference's future development. Due to pandemic-related restrictions and the predominance of online activities, fewer on-site photographs were captured compared with later editions of the conference.</p>
+                <p>
+                    <div id="I1Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+        </div>
+                </p>
+            </li>
+            <li>SSIM 2022– Bringing Intelligent Management to Social Sciences
+                <p>The 2nd IEEE International Conference on Social Sciences and Intelligence Management (IEEE SSIM 2022) adopted the theme “Bringing Intelligent Management to Social Sciences.” The conference expanded its international reach and promoted interdisciplinary dialogue among researchers in social sciences, education, technology, and intelligent management.</p>
+                <p>
+                    <div id="I2Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+        </div>
+                </p>
+            </li>
+            <li>SSIM 2023– Innovative Learning Technology in Social Sciences and Intelligence Management
+                <p>The 2nd IEEE International Conference on Social Sciences and Intelligence Management (IEEE SSIM 2022) adopted the theme “Bringing Intelligent Management to Social Sciences.” The conference expanded its international reach and promoted interdisciplinary dialogue among researchers in social sciences, education, technology, and intelligent management.</p>
+                <p>
+                    <div id="I3Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+        </div>
+                </p>
+            </li>
+            <li>SSIM 2024– New Trends in Social Sciences and Intelligence Management
+                <p>
+The 4th International Conference on Social Sciences and Intelligence Management (SSIM 2024) explored emerging trends shaping the future of social sciences and intelligence management. Bringing together scholars and professionals from around the world, the conference emphasized interdisciplinary research, artificial intelligence, big data applications, educational technologies, and social innovation.
+                </p>
+                <p>
+                    <div id="I4Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+        </div>
+                </p>
+            </li>
+            <li>SSIM 2025 – Integrating Artificial Intelligence in Social Sciences and Intelligence Management
+                <p>The 4th International Conference on Social Sciences and Intelligence Management (SSIM 2024) explored emerging trends shaping the future of social sciences and intelligence management. Bringing together scholars and professionals from around the world, the conference emphasized interdisciplinary research, artificial intelligence, big data applications, educational technologies, and social innovation.</p>
+                <p><div id="I5Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+        </div></p>
+            </li>
+        </ul>
 
-        </p>
-        <h5 style="color: #006ABD;"><b>Conference Theme</b></h5>
-        <p>
-            Human-Centered AI, Sustainable Digital Ecosystems, and Intelligent Transformation in Social Sciences<br/>
-            SSIM 2026 focuses on the integration of artificial intelligence, digital technologies, and social sciences to address contemporary societal challenges and opportunities. The conference encourages research that promotes ethical AI development, sustainable digital innovation, educational transformation, intelligent management, social inclusion, and human well-being.<br/>
-            Topics of interest include, but are not limited to:
-        </p>
-        <ul>
-          <li>
-            Human-Centered AI and Intelligent Learning Ecosystems
-          </li>
-          <li>
-            Emerging Technologies for Early Childhood Development and Interactive Learning
-          </li>
-          <li>
-             Intelligent Language Education, EMI, and Digital Communication
-          </li>
-          <li>
-            Intelligent Healthcare, Social Innovation, and Inclusive Technologies
-          </li>
-          <li>
-            Computational Media, Digital Communication, and Information Ethics
-          </li>
-          <li>
-            AI-Driven Business Analytics and Sustainable Governance
-          </li>
-          <li>
-            Computational Social Sciences and Advanced Data Analytics
-          </li>
-        </ul>
-        <hr />
-        <table class="table">
-            <tr>
-              <td><b>Academic Milestone</b></td>
-              <td><b>Deadline</b></td>
-            </tr>
-            
-            <tr>
-              <td>Abstract Submission Deadline</td>
-              <td>September 10, 2026</td>
-            </tr>
-            <tr>
-              <td>Notification of Abstract Acceptance</td>
-              <td>September 25, 2026</td>
-            </tr>
-            
-            <tr>
-              <td>Full Paper Submission Deadline</td>
-              <td>November 05, 2026</td>
-            </tr>
-            <tr>
-              <td>Notification of Full Paper Review</td>
-              <td>November 30, 2026</td>
-            </tr>
-            
-        </table>
-        <hr />
-        <h5 ><b>Latest News</b></h5>
-        <p>
-            <i>June 11, 2026</i>: Conference Venue
-        </p>
-        <p>
-            SSIM 2026 will be held at Chaoyang University of Technology, Taichung, Taiwan.
-        </p>
-        <p>
-            <i>June 11, 2026</i>:  Web page launch
-        </p>
-        <p>
-            SSIM 2026 website is now online.
-        </p>
-        <hr />
-        <h5 style="color: #006ABD;"><b>Keynote Speakers Highlights</b></h5>
-        <p>
-            Distinguished international scholars and industry leaders from the fields of Artificial Intelligence, Social Sciences, Education, Digital Innovation, and Sustainable Development will be invited to deliver keynote speeches.
-        </p>
-        <p>
-            Confirmed keynote speakers will be announced soon.
-        </p>
-        <p>
-            Areas of expertise include:
-        </p>
-        <ul>
-            <li>Human-Centered Artificial Intelligence</li>
-            <li>AI and Education</li>
-            <li>Digital Transformation</li>
-            <li>Sustainable Development</li>
-            <li>Social Innovation</li>
-            <li>Intelligent Management Systems</li>
-        </ul>
-        <p>
-            Stay tuned for keynote speaker announcements and program updates.
-        </p>
       </div>
 
       <div class="col-md-1 col-sm-1 col-1"></div>
