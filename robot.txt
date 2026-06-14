@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ssim2026.cyut.edu.tw/sitemap.xml
