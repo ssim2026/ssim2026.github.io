@@ -116,14 +116,22 @@ border-left: 4px solid #4FC3F7;
     max-height: 70px;
 }
 .carousel-item{
-    height:45vh;
-    
+    background: #F4F6F9;
+    text-align:center;
+    overflow:hidden;
 }
 
-.carousel-item img{
+.banner-img{
     width:100%;
-    height:100%;
+    height:auto;
+    max-height:420px;
+
+    object-fit:contain;
+    display:block;
+    margin:auto;
 }
+
+
 .text-justify{
     text-align: justify;
 }
@@ -140,10 +148,9 @@ border-left: 4px solid #4FC3F7;
 /* 手機 */
 @media (max-width: 768px){
 
-    .carousel-item{
-        height: 30vh;
+     .banner-img{
+        max-height:220px;
     }
-    
   .sidebar{
         display:none;
     }
@@ -164,9 +171,6 @@ border-left: 4px solid #4FC3F7;
 /* 小手機 */
 @media (max-width: 576px){
 
-    .carousel-item{
-        height: 25vh;
-    }
 
 }
 @media (max-width: 992px) {
@@ -304,21 +308,13 @@ border-left: 4px solid #4FC3F7;
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 95%; margin: 0 auto; ">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/banner0615-2.png"  alt="..." style="">
+                    <img src="img/banner 0616.jpg"  alt="..." style="" class="banner-img">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/banner2.png"  alt="..." style="">
+                    <img src="img/banner3.png"  alt="..." style="" class="banner-img">
                 </div>
                 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </section>
     <section id="home" class="hero text-justify">
