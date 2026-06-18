@@ -29,6 +29,13 @@
     .read-more-box.expanded {
         display: block;
     }
+    .read-more-box2 {
+    display: none;
+    }
+
+    .read-more-box2.expanded2 {
+        display: block;
+    }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -386,6 +393,15 @@ border-left: 4px solid #4FC3F7;
             Title: <br />
             Document Verification in the AI Era: The Battle Against Presentation Attacks
         </p>
+        <div class="read-more-box2" >
+            <p>
+                Abstract: <br />
+                In the artificial intelligence era, automated document verification is essential for global banking, border security, and digital eKYC systems. However, generative fraud and realistic spoofing techniques create new challenges. Traditional systems can be easily tricked by advanced print, screen-replay, and composite document attacks. Although current deep learning methods have reached impressive levels in controlled settings, they usually perform poorly in real-world, cross-domain situations. These models tend to fit too closely to local environmental details, camera differences, and specific lighting rather than focusing on universal security features. This keynote will present an overview of recent advances in document security, focusing on the challenges and developments in Identity Document Presentation Attack Detection (ID-PAD), and presenting the innovative solutions developed by our research group, which is a unified dual-stream topology evaluated on the IJCB 2026 benchmark. Our framework integrates a Low-Rank Adapted (LoRA) Swin Transformer V2, which captures hierarchical spatial representations, with a parallel Discrete Cosine Transform (DCT) branch dedicated to texture and frequency-domain analysis. The experiments show that SwinDCT-PAD significantly reduces detection errors and delivers strong generalization to unseen document formats and presentation attacks, advancing the state of the art in secure remote identity verification.
+            </p>
+        </div>
+        <button class="read-more-btn btn-ssim" onclick="toggleReadMore2(this)" >
+            View Full Abstract & Biography
+        </button>
       </div>
 
       <div class="col-md-1"></div>
@@ -427,6 +443,17 @@ function toggleReadMore(button) {
     box.classList.toggle("expanded");
 
     if (box.classList.contains("expanded")) {
+        button.textContent = "View Less";
+    } else {
+        button.textContent = "View Full Abstract & Biography";
+    }
+}
+function toggleReadMore2(button) {
+    const box = button.previousElementSibling;
+
+    box.classList.toggle("expanded2");
+
+    if (box.classList.contains("expanded2")) {
         button.textContent = "View Less";
     } else {
         button.textContent = "View Full Abstract & Biography";
