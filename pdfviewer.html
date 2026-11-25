@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #pdf-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-y;
+
+            background: #eeeeee;
+        }
+
+        .pdf-page {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="pdf-container"></div>
+
+<script>
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+    const params = new URLSearchParams(location.search);
+    const url = params.get("file") || "/PDF/test.pdf";
+
+    const container = document.getElementById("pdf-container");
+
+    async function loadPDF() {
+
+        const pdf = await pdfjsLib.getDocument({
+            url: url,
+            isEvalSupported: false
+        }).promise;
+
+        for (let i = 1; i <= pdf.numPages; i++) {
+
+            const page = await pdf.getPage(i);
+
+            const original = page.getViewport({
+                scale: 1
+            });
+
+            const scale =
+                container.clientWidth / original.width;
+
+            const viewport = page.getViewport({
+                scale: scale
+            });
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "pdf-page";
+
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("2d");
+
+            canvas.width = Math.ceil(viewport.width);
+            canvas.height = Math.ceil(viewport.height);
+
+            wrapper.appendChild(canvas);
+            container.appendChild(wrapper);
+
+            await page.render({
+                canvasContext: context,
+                viewport: viewport
+            }).promise;
+
+            console.log("完成第 " + i + " 頁");
+        }
+    }
+
+    loadPDF().catch(error => {
+        const message = document.createElement("p");
+        message.textContent = "載入失敗：" + error.message;
+        container.appendChild(message);
+    });
+
+</script>
+
+</body>
+</html>
